@@ -12,3 +12,9 @@
   border-bottom: 1px solid lightgray;
   object-fit: contain;
 }
+
+.app_signUp {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
