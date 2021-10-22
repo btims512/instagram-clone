@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import instaLogo from "./img/insta.png";
-import SearchBar from "./SearchBar";
-import Post from "./Post";
-import { db, auth } from "./firebase";
+import SearchBar from "./Components/SearchBar/SearchBar";
+import Post from "./Components/UserPosts/Post";
+import { db, auth } from "./Components/firebase/firebase";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
-import ImageUpload from "./ImageUpload";
+import ImageUpload from "./Components/ImageUpload/ImageUpload";
 import InstagramEmbed from "react-instagram-embed";
 import Avatar from "@material-ui/core/Avatar";
-import NavBarIcons from "./NavBarIcons";
+import NavBarIcons from "./Components/NavBar/NavBarIcons";
 // import NavBar from "./NavBar";
 import HomeIcon from "@mui/icons-material/Home";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
@@ -204,7 +204,7 @@ const App = () => {
         )}
       </div>
 
-      <div className="app_posts">
+      <div className="app_posts" style={{ backgroundColor: "#fafafa" }}>
         <div className="app_postsLeft">
           {posts.map(({ id, post }) => (
             <Post

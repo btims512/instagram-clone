@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import instaLogo from "./img/insta.png";
-import SearchBar from "./SearchBar";
-import Post from "./Post";
-import { db, auth } from "./firebase";
+import SearchBar from "../SearchBar/SearchBar";
+import Post from "../UserPosts/Post";
+import { db, auth } from "../firebase/firebase";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
-import ImageUpload from "./ImageUpload";
+import ImageUpload from "../ImageUpload/ImageUpload";
 import InstagramEmbed from "react-instagram-embed";
 import Avatar from "@material-ui/core/Avatar";
 
