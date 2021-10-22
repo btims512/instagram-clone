@@ -144,19 +144,19 @@ const App = () => {
           <form className="app_signup">
             <center>
               <img className="app_headerImg" src={instaLogo} alt="insta" />
-              <Input
-                placeholder="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <Input
-                placeholder="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
             </center>
+            <Input
+              placeholder="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Input
+              placeholder="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <Button type="submit" onClick={signIn}>
               Sign In
             </Button>
