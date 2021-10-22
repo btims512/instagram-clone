@@ -51,7 +51,8 @@ function Post(props) {
       <img className="post_image" src={imageUrl} alt="post" />
       {/* username + caption */}
       <h4 className="post_text">
-        <strong>{username}</strong> - {caption}
+        <strong>{username}</strong>
+        {caption}
       </h4>
       <div className="post_comments">
         {comments &&

@@ -184,7 +184,7 @@ const App = () => {
         <NavBarIcons>
           <HomeIcon style={{ margin: "10px" }} />
           <TextsmsOutlinedIcon style={{ margin: "10px" }} />
-          <AddBoxOutlinedIcon style={{ padding: "", margin: "10px" }} />
+          <AddBoxOutlinedIcon style={{ margin: "10px" }} />
           <ExploreOutlinedIcon style={{ margin: "10px" }} />
           <FavoriteBorderOutlinedIcon style={{ margin: "10px" }} />
         </NavBarIcons>
