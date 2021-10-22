@@ -38,7 +38,6 @@ function Post(props) {
   };
   return (
     <div src={stories} className="post">
-      {/* header => avatar + username */}
       <div className="post_header">
         <Avatar
           className="post_avatar"
