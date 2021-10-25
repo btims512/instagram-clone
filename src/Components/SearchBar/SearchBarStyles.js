@@ -3,7 +3,6 @@ import styled from "styled-components";
 const SearchBarStyles = styled.div`
 
   body {
-    background-color: great
     color: gray;
     font-family: sans-serif;
   }

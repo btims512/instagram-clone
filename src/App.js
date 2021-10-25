@@ -11,12 +11,12 @@ import ImageUpload from "./Components/ImageUpload/ImageUpload";
 import InstagramEmbed from "react-instagram-embed";
 import Avatar from "@material-ui/core/Avatar";
 import NavBarIcons from "./Components/NavBar/NavBarIcons";
-// import NavBar from "./NavBar";
 import HomeIcon from "@mui/icons-material/Home";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
+import { useMediaQuery } from "react-responsive";
 
 function getModalStyle() {
   const top = 50;
@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
   const classes = useStyles();
   const [modalStyle] = useState(getModalStyle);
-
   const [openSignIn, setOpenSignIn] = useState(false);
   const [posts, setPosts] = useState([]);
   const [open, setOpen] = useState(false);
@@ -165,7 +164,15 @@ const App = () => {
       </Modal>
 
       {/* <NavBar /> */}
-      <div className="app_header">
+
+      <div
+        className="app_header"
+        style={{
+          overflow: "auto",
+          whiteSpace: "nowrap",
+        }}
+      >
+        {/* <NavBarIcons> */}
         <img
           className="app_headerImg"
           style={{ cursor: "pointer" }}
@@ -181,13 +188,13 @@ const App = () => {
             <Button onClick={() => setOpen(true)}>Sign Up</Button>
           </div>
         )} */}
-        <NavBarIcons>
+        {/* <useMediaQuery minWidth={1224} >
           <HomeIcon style={{ margin: "10px" }} />
+      </useMediaQuery>
           <TextsmsOutlinedIcon style={{ margin: "10px" }} />
           <AddBoxOutlinedIcon style={{ margin: "10px" }} />
           <ExploreOutlinedIcon style={{ margin: "10px" }} />
-          <FavoriteBorderOutlinedIcon style={{ margin: "10px" }} />
-        </NavBarIcons>
+          <FavoriteBorderOutlinedIcon style={{ margin: "10px" }} /> */}
         <Avatar
           style={{ cursor: "pointer" }}
           className="post_avatar"
@@ -202,8 +209,9 @@ const App = () => {
             <Button onClick={() => setOpen(true)}>Sign Up</Button>
           </div>
         )}
+        {/* </NavBarIcons> */}
       </div>
-
+      {/* Posts */}
       <div className="app_posts" style={{ backgroundColor: "#fafafa" }}>
         <div className="app_postsLeft">
           {posts.map(({ id, post }) => (
